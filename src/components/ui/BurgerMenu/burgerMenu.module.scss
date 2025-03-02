@@ -1,0 +1,110 @@
+.BurgerMenu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 40%;
+	background: #09151f69;
+	backdrop-filter: blur(10px);
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	padding: 30px;
+	transform: translateY(-100%);
+	transition: transform 0.3s ease-in-out;
+
+	&.active {
+		transform: translateY(0);
+		animation: dropDown 0.4s ease-out;
+	}
+
+	.nav {
+		text-align: center;
+
+		.buttons {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 22px;
+
+			.logo1 {
+				width: 40px;
+				border: none;
+				background: none;
+				cursor: pointer;
+				font-family: Montserrat;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 19.5px;
+			}
+
+			.logo2 {
+				width: 140px;
+				height: 35px;
+				border-radius: 5px;
+				border: none;
+				background: #034078;
+				font-family: Montserrat;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 19.5px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin: 15px 0;
+
+			a {
+				color: white;
+				font-size: 18px;
+				font-weight: bold;
+				text-decoration: none;
+				display: block;
+				padding: 5px;
+				transition: color 0.2s;
+				font-family: Montserrat;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 19.5px;
+
+				&:hover {
+					color: #034078;
+				}
+			}
+		}
+	}
+}
+
+@keyframes dropDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	70% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.closeButton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 10px;
+	transition: color 0.3s;
+
+	&:hover {
+		color: #034078;
+	}
+}

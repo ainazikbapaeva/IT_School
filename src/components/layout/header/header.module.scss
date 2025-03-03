@@ -1,8 +1,9 @@
 .header {
-	background: hsla(226, 60%, 10%, 0.4);
+	background: hsla(224, 62%, 7%, 0.4);
 	height: 100px;
 	display: flex;
 	align-items: center;
+	z-index: 2;
 
 	.content {
 		display: flex;

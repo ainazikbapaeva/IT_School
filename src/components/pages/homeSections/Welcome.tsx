@@ -1,7 +1,7 @@
 import Image from "next/image";
 import scss from "./welcome.module.scss";
 import it from "../../../assets/images/itmen.png";
-
+// fghjk
 const Welcome = () => {
 	return (
 		<div className={scss.welcome}>

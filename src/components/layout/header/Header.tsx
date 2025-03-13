@@ -27,7 +27,7 @@ const Header = () => {
 	}, []);
 	return (
 		<div className={scss.header}>
-			<div className="container">
+			<div className="container">	
 				<div className={scss.content}>
 					<Image
 						onClick={() => route.push("/")}

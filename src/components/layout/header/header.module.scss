@@ -1,21 +1,23 @@
 .header {
-	background: hsla(224, 62%, 7%, 0.4);
+	// background: #0a1128;
+	background: #0a112866;
 	height: 100px;
 	display: flex;
 	align-items: center;
 	z-index: 2;
+	position: fixed;
+	width: 100%;
 
 	.content {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: clamp(20px, 4vw, 20px);
-		padding: 0 50px;
 
 		.right {
 			display: flex;
 			justify-content: space-around;
-			gap: clamp(550px, 4vw, 70px);
+			gap: clamp(650px, 4vw, 70px);
 
 			.nav {
 				display: flex;
@@ -82,7 +84,7 @@
 				align-items: center;
 				gap: 40px;
 				position: relative;
-				right: 50px;
+				right: 100px;
 
 				.btn1 {
 					border: none;
@@ -92,6 +94,7 @@
 					font-weight: 500;
 					font-size: 16px;
 					line-height: 19.5px;
+					color: white;
 				}
 
 				.btn2 {
@@ -106,6 +109,7 @@
 					font-size: 16px;
 					line-height: 19.5px;
 					text-align: center;
+					color: white;
 
 					&:hover {
 						transition: 0.3s;
@@ -118,7 +122,7 @@
 
 		.burger {
 			position: relative;
-			left: 40px;
+			// left: 40px;
 		}
 	}
 }

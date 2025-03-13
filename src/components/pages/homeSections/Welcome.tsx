@@ -1,7 +1,6 @@
-import Image from "next/image";
+// import Image from "next/image";
 import scss from "./welcome.module.scss";
-import it from "../../../assets/images/itmen.png";
-// fghjk
+import Latest from "./Latest";
 const Welcome = () => {
 	return (
 		<div className={scss.welcome}>
@@ -14,9 +13,9 @@ const Welcome = () => {
 							знания для адаптации в IT-сфере.
 						</p>
 					</div>
-					<Image src={it} alt="it" />
 				</div>
 			</div>
+			<Latest />
 		</div>
 	);
 };

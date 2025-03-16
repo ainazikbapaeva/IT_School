@@ -1,7 +1,20 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import scss from "./application.module.scss";
 
 const Application = () => {
+	const [fullName, setFullName] = useState("");
+	const [phoneNumber, setPhoneNumber] = useState("");
+	const [email, setEmail] = useState("");
+
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+		console.log("Form submitted:", { fullName, phoneNumber, email });
+
+		setFullName("");
+		setPhoneNumber("");
+		setEmail("");
+	};
 	return (
 		<div className={scss.application}>
 			<div className="container">
@@ -13,21 +26,33 @@ const Application = () => {
 							разговору с вами
 						</p>
 					</div>
-					<div className={scss.formBlock}>
+					<form onSubmit={handleSubmit} className={scss.formBlock}>
 						<div className={scss.form}>
 							<span>ФИО*</span>
-							<input type="text" />
+							<input
+								type="text"
+								value={fullName}
+								onChange={(e) => setFullName(e.target.value)}
+							/>
 						</div>
 						<div className={scss.form}>
 							<span>Номер телефон*</span>
-							<input type="text" />
+							<input
+								type="text"
+								value={phoneNumber}
+								onChange={(e) => setPhoneNumber(e.target.value)}
+							/>
 						</div>
 						<div className={scss.form}>
 							<span>Email*</span>
-							<input type="text" />
+							<input
+								type="text"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
 						</div>
-						<button>Отправить</button>
-					</div>
+						<button type="submit">Отправить</button>
+					</form>
 				</div>
 			</div>
 		</div>

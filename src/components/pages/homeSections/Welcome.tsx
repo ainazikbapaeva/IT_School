@@ -1,6 +1,7 @@
 // import Image from "next/image";
 import scss from "./welcome.module.scss";
 import Latest from "./Latest";
+import Question from "./Question";
 const Welcome = () => {
 	return (
 		<div className={scss.welcome}>
@@ -16,6 +17,9 @@ const Welcome = () => {
 				</div>
 			</div>
 			<Latest />
+			<div className={scss.pageContainer}>
+				<Question />
+			</div>
 		</div>
 	);
 };
